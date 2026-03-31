@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Приглашение на свадьбу — Islomkhon & Diyara</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-blur blur-1"></div>
+  <div class="floating-blur blur-2"></div>
+  <div class="petals" id="petals"></div>
+
+  <!-- Замените src на ваш mp3 -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="./music/song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <button id="musicToggle" class="music-toggle" type="button" aria-label="Управление музыкой">
+    ♫ Музыка
+  </button>
+
+  <main class="wrapper">
+    <section class="hero">
+      <div class="hero-card reveal visible">
+        <div class="hero-content">
+          <p class="eyebrow">С любовью приглашаем</p>
+
+          <h1 class="title">
+            Islomkhon <span class="amp">&</span> Diyara
+          </h1>
+
+          <p class="subtitle">
+            Дорогие родные и друзья, мы счастливы пригласить вас разделить с нами
+            самый тёплый, красивый и незабываемый вечер — день нашей свадьбы.
+          </p>
+
+          <div class="date-badge">
+            <span>06.06.2026</span>
+            <span>•</span>
+            <span>20:00</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#details" class="btn btn-primary">Детали вечера</a>
+            <a href="#location" class="btn btn-secondary">Как добраться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card couple-gallery reveal">
+        <h2>Sweet moments</h2>
+
+        <div class="single-photo-card">
+          <div class="photo-placeholder">
+            <!-- Вставьте сюда общее фото пары -->
+            <img src="./images/couple.jpg" alt="Islomkhon и Diyara" />
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card story reveal">
+          <h2>Наша история</h2>
+          <p>
+            Любовь начинается с одного взгляда, становится сильнее с каждым разговором
+            и превращается в вечность, когда два сердца выбирают друг друга.
+            В этот особенный день мы открываем новую главу нашей жизни и будем счастливы,
+            если вы станете частью этого важного момента.
+          </p>
+
+          <blockquote class="quote">
+            «Там, где есть <span>любовь</span>, начинается самое прекрасное чудо жизни»
+          </blockquote>
+        </article>
+
+        <article class="card details reveal" id="details">
+          <h2>Детали вечера</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="time">Дата</div>
+              <div>
+                <strong>06 июня 2026</strong>
+                <p>День, когда мы скажем друг другу главное “да”.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="time">Время</div>
+              <div>
+                <strong>20:00</strong>
+                <p>Начало свадебного вечера.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="time">Формат</div>
+              <div>
+                <strong>Праздничный ужин и торжество</strong>
+                <p>Улыбки, тёплые объятия и красивые воспоминания приветствуются.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <article class="card countdown-wrap reveal" id="countdown">
+        <h2>До нашей свадьбы осталось</h2>
+        <p>Каждая секунда приближает нас к самому важному вечеру нашей жизни.</p>
+
+        <div class="countdown">
+          <div class="count-item">
+            <div class="count-value" id="days">0</div>
+            <div class="count-label">Дней</div>
+          </div>
+          <div class="count-item">
+            <div class="count-value" id="hours">0</div>
+            <div class="count-label">Часов</div>
+          </div>
+          <div class="count-item">
+            <div class="count-value" id="minutes">0</div>
+            <div class="count-label">Минут</div>
+          </div>
+          <div class="count-item">
+            <div class="count-value" id="seconds">0</div>
+            <div class="count-label">Секунд</div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section">
+      <article class="card location reveal" id="location">
+        <h2>Место проведения</h2>
+
+        <p class="location-text">
+          <strong>Адрес:</strong><br />
+          г. Шымкент, жилой массив Сайрам, торжественный зал
+          <span class="placeholder">«Гулрух»</span><br />
+          <strong>Ориентир:</strong> рядом с парком Наурыз<br />
+          <strong>Координаты:</strong>
+          <span class="placeholder">42.30944988823205, 69.75635650541767</span>
+        </p>
+
+        <div class="map-actions">
+          <a
+            class="btn btn-primary"
+            href="https://maps.google.com/?q=42.30944988823205,69.75635650541767"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Открыть карту
+          </a>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            title="Карта места проведения"
+            src="https://www.google.com/maps?q=42.30944988823205,69.75635650541767&z=16&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p>С любовью, Islomkhon & Diyara — 06.06.2026</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
