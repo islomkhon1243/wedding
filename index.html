@@ -18,8 +18,35 @@
   <div class="floating-blur blur-1"></div>
   <div class="floating-blur blur-2"></div>
   <div class="petals" id="petals"></div>
+  <div class="sparkles" id="sparkles"></div>
 
-  <!-- Замените src на ваш mp3 -->
+  <!-- Стартовая анимация-конверт -->
+  <div class="intro-overlay" id="introOverlay">
+    <div class="intro-inner">
+      <p class="intro-top-text">У вас новое приглашение</p>
+
+      <div class="envelope-scene" id="envelopeScene">
+        <div class="envelope">
+          <div class="envelope-back"></div>
+          <div class="envelope-letter">
+            <div class="letter-content">
+              <p class="letter-eyebrow">Wedding Invitation</p>
+              <h2>Islomkhon & Diyara</h2>
+              <p>06.06.2026 • 20:00</p>
+            </div>
+          </div>
+          <div class="envelope-front"></div>
+          <div class="envelope-flap"></div>
+        </div>
+      </div>
+
+      <button id="openInvitationBtn" class="intro-open-btn" type="button">
+        Открыть приглашение
+      </button>
+    </div>
+  </div>
+
+  <!-- Музыка -->
   <audio id="bgMusic" loop preload="auto">
     <source src="./music/song.mp3" type="audio/mpeg" />
   </audio>
@@ -28,8 +55,8 @@
     ♫ Музыка
   </button>
 
-  <main class="wrapper">
-    <section class="hero">
+  <main class="wrapper hidden-before-open" id="mainContent">
+    <section class="hero parallax-section">
       <div class="hero-card reveal visible">
         <div class="hero-content">
           <p class="eyebrow">С любовью приглашаем</p>
@@ -50,21 +77,27 @@
           </div>
 
           <div class="hero-actions">
-            <a href="#details" class="btn btn-primary">Детали вечера</a>
+            <a href="#details" class="btn btn-primary glow-btn">Детали вечера</a>
             <a href="#location" class="btn btn-secondary">Как добраться</a>
+          </div>
+
+          <div class="scroll-indicator">
+            <span></span>
           </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <article class="card couple-gallery reveal">
-        <h2>Sweet moments</h2>
+      <article class="card couple-gallery reveal hover-float">
+        <h2>Moments</h2>
 
         <div class="single-photo-card">
           <div class="photo-placeholder">
             <!-- Вставьте сюда общее фото пары -->
+            
             <img src="./images/couple.jpg" alt="Islomkhon и Diyara" />
+            
           </div>
         </div>
       </article>
@@ -72,7 +105,7 @@
 
     <section class="section">
       <div class="grid">
-        <article class="card story reveal">
+        <article class="card story reveal hover-float">
           <h2>Наша история</h2>
           <p>
             Любовь начинается с одного взгляда, становится сильнее с каждым разговором
@@ -86,7 +119,7 @@
           </blockquote>
         </article>
 
-        <article class="card details reveal" id="details">
+        <article class="card details reveal hover-float" id="details">
           <h2>Детали вечера</h2>
 
           <div class="timeline">
@@ -119,7 +152,7 @@
     </section>
 
     <section class="section">
-      <article class="card countdown-wrap reveal" id="countdown">
+      <article class="card countdown-wrap reveal hover-float" id="countdown">
         <h2>До нашей свадьбы осталось</h2>
         <p>Каждая секунда приближает нас к самому важному вечеру нашей жизни.</p>
 
@@ -145,7 +178,7 @@
     </section>
 
     <section class="section">
-      <article class="card location reveal" id="location">
+      <article class="card location reveal hover-float" id="location">
         <h2>Место проведения</h2>
 
         <p class="location-text">
@@ -158,15 +191,24 @@
         </p>
 
         <div class="map-actions">
-          <a
-            class="btn btn-primary"
-            href="https://maps.google.com/?q=42.30944988823205,69.75635650541767"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Открыть карту
-          </a>
-        </div>
+		  <a
+			class="btn btn-primary glow-btn"
+			href="https://maps.google.com/?q=42.30944988823205,69.75635650541767"
+			target="_blank"
+			rel="noopener noreferrer"
+		  >
+			Google Maps
+		  </a>
+
+		  <a
+			class="btn btn-secondary"
+			href="https://2gis.kz/shymkent/search/42.30944988823205%2C%2069.75635650541767/firm/70000001026865531/69.756418%2C42.309386?m=69.757349%2C42.308836%2F19.22"
+			target="_blank"
+			rel="noopener noreferrer"
+		  >
+			2GIS
+		  </a>
+		</div>
 
         <div class="map-frame">
           <iframe
