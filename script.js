@@ -1,4 +1,4 @@
-const weddingDate = new Date("2026-06-06T20:00:00");
+const weddingDate = new Date("2026-06-06T19:00:00");
 const bgMusic = document.getElementById("bgMusic");
 const musicToggle = document.getElementById("musicToggle");
 const introOverlay = document.getElementById("introOverlay");
